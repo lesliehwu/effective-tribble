@@ -1,0 +1,10 @@
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<p> {{ messages[0] }} </p>
+	{% endif %}
+{% endwith %}
+
+<form action='/check' method='post'>
+	Email Address: <input type='text' name='email'>
+	<input type='submit' value='Submit BITCH'>
+</form>

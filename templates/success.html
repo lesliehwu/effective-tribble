@@ -1,0 +1,18 @@
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<p>{{ messages[0] }}</p>
+	{% endif %}
+{% endwith %}
+
+<table>
+	<tr>
+		<th>Email Addresses Entered:</th>
+		<th></th>
+	</tr>
+	{% for row in emails %}
+	<tr>
+		<td> {{ row['email'] }} </td>
+		<td> {{ row['created_at'] }} </td>
+	</tr>
+	{% endfor %}
+</table>
